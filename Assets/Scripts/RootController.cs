@@ -26,8 +26,8 @@ public class RootController : MonoBehaviour {
 			GameObject go = Instantiate(CreationObject) as GameObject;
 			go.transform.position = this.transform.position;
 			go.transform.Rotate(shootVec);
-			go.rigidbody2D.AddRelativeForce(Vector3.up * Force * go.rigidbody2D.mass);
 			go.rigidbody2D.mass = Random.Range(1,3);
+			go.rigidbody2D.AddRelativeForce(Vector3.down * Force * go.rigidbody2D.mass);
 			LastCreationTime = Time.time;
 		}
 	}

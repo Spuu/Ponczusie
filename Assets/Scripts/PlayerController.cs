@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape)) 
 			Application.Quit();
 	}
+	
+	void OnCollisionEnter2D(Collision2D c) {
+		if( c.transform.tag == "Brick" )
+			Destroy(c.gameObject);
+	}
 	// Update is called once per frame
 	/*void Update () {
 		bool jump = Input.GetButtonDown("Jump");
