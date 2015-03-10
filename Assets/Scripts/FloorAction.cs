@@ -9,7 +9,7 @@ public class FloorAction : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void OnCollisionEnter (Collision c) {
+	void OnCollisionEnter2D(Collision2D c) {
 		if( c.transform.tag == "Brick" )
 			Destroy(c.gameObject);
 	}
